@@ -208,8 +208,8 @@ export class Model {
         };
 
       case status.isLoose:
-        status.isWin = true;
-        status.isLoose = false;
+        status.isWin = false;
+        status.isLoose = true;
         status.winnerIndex = 4;
         return {
           gameStatus: status,
