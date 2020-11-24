@@ -211,11 +211,10 @@ export class Model {
         status.isWin = true;
         status.isLoose = false;
         status.winnerIndex = 4;
-        let looseData = Model.getWinScreen(slotValues[status.winnerIndex]);
         return {
           gameStatus: status,
-          screen: looseData.area,
-          happyRow: looseData.row
+          screen: Model.getRandomLooseScreen(),
+          happyRow: 0
         };
 
       case status.isJackpot:
